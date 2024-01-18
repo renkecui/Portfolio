@@ -1,0 +1,195 @@
+.about-page {
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .about-page .div {
+    background-color: #d9d9d9;
+    height: 1024px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .about-page .header {
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    height: 160px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .about-page .overlap-group {
+    background-color: #223843;
+    border-radius: 8px;
+    height: 110px;
+    left: 30px;
+    position: relative;
+    top: 30px;
+    width: 1380px;
+  }
+  
+  .about-page .text-wrapper {
+    -webkit-text-stroke: 1px #000000;
+    color: #ffffff;
+    font-family: "Kaisei HarunoUmi-Regular", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 23px;
+    width: 200px;
+  }
+  
+  .about-page .nav-bar {
+    box-shadow: 0px 4px 4px #00000040;
+    height: 110px;
+    left: 780px;
+    position: absolute;
+    top: 0;
+    width: 600px;
+  }
+  
+  .about-page .works-button {
+    align-items: center;
+    background-color: #48654e;
+    border-radius: 8px;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    left: 220px;
+    opacity: 0.8;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+  }
+  
+  .about-page .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .about-page .about-me-button {
+    align-items: center;
+    background-color: #48654e;
+    border-radius: 8px;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    left: 390px;
+    opacity: 0.8;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+  }
+  
+  .about-page .glass-effect {
+    background-color: #7e7e7eb2;
+    border-radius: 8px;
+    height: 780px;
+    left: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 195px;
+    width: 1380px;
+  }
+  
+  .about-page .resume-button {
+    align-items: center;
+    background-color: #79bda5;
+    border-radius: 8px;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    left: 1200px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+  }
+  
+  .about-page .text-wrapper-3 {
+    color: #000000;
+    font-family: "Kaisei HarunoUmi-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+  }
+  
+  .about-page .image {
+    height: 50px;
+    left: 984px;
+    object-fit: cover;
+    position: absolute;
+    top: 20px;
+    width: 200px;
+  }
+  
+  .about-page .img {
+    height: 90px;
+    left: 1017px;
+    object-fit: cover;
+    position: absolute;
+    top: 92px;
+    width: 120px;
+  }
+  
+  .about-page .image-2 {
+    height: 100px;
+    left: 1221px;
+    object-fit: cover;
+    position: absolute;
+    top: 102px;
+    width: 100px;
+  }
+  
+  .about-page .frame {
+    align-items: center;
+    background-color: #c8102e;
+    border-radius: 8px 0px 0px 8px;
+    display: flex;
+    gap: 20px;
+    height: 150px;
+    justify-content: center;
+    left: 123px;
+    padding: 40px 20px;
+    position: absolute;
+    top: 66px;
+    width: 452px;
+  }
+  
+  .about-page .fall-began-my {
+    color: #ffffff;
+    font-family: "Kaisei HarunoUmi-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    height: 150px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-bottom: -39px;
+    margin-left: -19.5px;
+    margin-right: -19.5px;
+    margin-top: -41px;
+    position: relative;
+    text-align: center;
+    width: 451px;
+  }
+  
