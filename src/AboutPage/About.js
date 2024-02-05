@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 
-export const AboutPage = () => {
+function AboutPage() {
   return (
     <div className="about-page">
       <div className="div">
@@ -36,4 +36,6 @@ export const AboutPage = () => {
       </div>
     </div>
   );
-};
+}
+
+export default AboutPage;

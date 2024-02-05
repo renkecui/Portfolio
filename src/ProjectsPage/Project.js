@@ -1,7 +1,7 @@
 import React from "react";
-import "./style.css";
+import "./Project.css";
 
-export const ProjectsPage = () => {
+function ProjectsPage() {
   return (
     <div className="projects-page">
       <div className="div">
@@ -134,3 +134,4 @@ export const ProjectsPage = () => {
     </div>
   );
 };
+export default ProjectsPage;
