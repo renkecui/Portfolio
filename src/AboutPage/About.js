@@ -22,9 +22,9 @@ function AboutPage() {
           <div className="resume-button">
             <div className="text-wrapper-3">Resume</div>
           </div>
-          <img className="image" alt="Image" src="image-1.png" />
+          {/* <img className="image" alt="Image" src="image-1.png" />
           <img className="img" alt="Image" src="image-2.png" />
-          <img className="image-2" alt="Image" src="image-3.png" />
+          <img className="image-2" alt="Image" src="image-3.png" /> */}
           <div className="frame">
             <p className="fall-began-my">
               Fall 2021
