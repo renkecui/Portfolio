@@ -1,7 +1,10 @@
 import React from "react";
 import "./About.css";
+import { Link, useLocation } from "react-router-dom";
 
 function AboutPage() {
+  const { pathname } = useLocation();
+
   return (
     <div className="about-page">
       <div className="div">
@@ -9,11 +12,25 @@ function AboutPage() {
           <div className="overlap-group">
             <div className="text-wrapper">Renke Cui</div>
             <div className="nav-bar">
-              <div className="works-button">
-                <div className="text-wrapper-2">Projects</div>
+            <div className="works-button">
+                <Link
+                  to="/Projects"
+                  className={`nav-link ${
+                    pathname.includes("Projects") ? "active" : ""
+                  }`}
+                >
+                  Projects
+                </Link>
               </div>
               <div className="about-me-button">
-                <div className="text-wrapper-2">About Me</div>
+              <Link
+                  to="/About"
+                  className={`button text-wrapper-3${
+                    pathname.includes("About") ? "active" : ""
+                  }`}
+                >
+                  About Me
+                </Link>
               </div>
             </div>
           </div>

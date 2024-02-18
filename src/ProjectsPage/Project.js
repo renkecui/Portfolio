@@ -1,7 +1,10 @@
 import React from "react";
 import "./Project.css";
+import { Link, useLocation } from "react-router-dom";
 
 function ProjectsPage() {
+  const { pathname } = useLocation();
+
   return (
     <div className="projects-page">
       <div className="div">
@@ -10,10 +13,24 @@ function ProjectsPage() {
             <div className="text-wrapper">Renke Cui</div>
             <div className="nav-bar">
               <div className="works-button">
-                <div className="text-wrapper-2">Projects</div>
+                <Link
+                  to="/Projects"
+                  className={`button text-wrapper-3${
+                    pathname.includes("Projects") ? "active" : ""
+                  }`}
+                >
+                  Projects
+                </Link>
               </div>
               <div className="about-me-button">
-                <div className="text-wrapper-2">About Me</div>
+                <Link
+                  to="/About"
+                  className={`button text-wrapper-3${
+                    pathname.includes("About") ? "active" : ""
+                  }`}
+                >
+                  About Me
+                </Link>
               </div>
             </div>
           </div>
@@ -133,5 +150,5 @@ function ProjectsPage() {
       </div>
     </div>
   );
-};
+}
 export default ProjectsPage;
