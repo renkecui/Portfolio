@@ -4,6 +4,7 @@ import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./HomePage/Home";
 import AboutPage from "./AboutPage/About";
 import ProjectsPage from "./ProjectsPage/Project";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

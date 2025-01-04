@@ -1,58 +1,67 @@
 import React from "react";
 import "./Home.css";
 import { Link, useLocation } from "react-router-dom";
-import { Container, Col, Row, Nav, Navbar } from "react-bootstrap";
+import { Container, Col, Row, Button, Body } from "react-bootstrap";
 import logoIMG from "../Resources/RC_LOGO.png";
+import OiaIMG from "../Resources/Renke_at_Oia.jpg";
 
 function Home() {
   const { pathname } = useLocation();
 
-  // var OiaPic = document.getElementById("OiaImage");
-  // OiaPic.src = "src/Pictures/Renke_at_Oia.jpg";
-
   return (
     <section className="home-page">
       <Container>
-        {/* <header className="header"> */}
-        <Row>
-          <Col>
-            <Navbar.Brand href="#/Home">
-              <img src={logoIMG} alt="Renke Cui Logo" height="100"></img>
-            </Navbar.Brand>
+        <Row className="align-items-center text-center Home-Header">
+          <Col md={1}>
+            <div className="logo">
+              <Link to="/Home" aria-label="Home">
+                <img src={logoIMG} alt="Renke Cui Logo" height="100" />
+              </Link>
+            </div>
           </Col>
-          <Col>
-            <div className="btnProjects">
+          <Col md={7}> </Col>
+          <Col md={1}>
+            <div className="projects-link nav-link">
               <Link
                 to="/Projects"
                 className={`nav-link ${
                   pathname.includes("Projects") ? "active" : ""
                 }`}
+                aria-current={
+                  pathname.includes("Projects") ? "page" : undefined
+                }
               >
-                Projects
+                <Button variant="secondary">Projects</Button>{" "}
               </Link>
             </div>
           </Col>
-          <Col>
-            <div className="btnAbout">
+          <Col md={2}>
+            <div className="about-link nav-link">
               <Link
                 to="/About"
-                className={`button text-wrapper-3${
+                className={`nav-link ${
                   pathname.includes("About") ? "active" : ""
                 }`}
+                aria-current={pathname.includes("About") ? "page" : undefined}
               >
-                About Me
+                <Button variant="secondary">About Me</Button>{" "}
               </Link>
             </div>
           </Col>
+          <Col md={1}> </Col>
         </Row>
-        {/* </header>
-        <content></content> */}
+      </Container>
+      <Container>
+        <div className="Home-Content">
+          <div className="intro-box"></div>
+        </div>
       </Container>
     </section>
   );
 }
 
 export default Home;
+
 //
 
 {

@@ -1,159 +1,51 @@
 .home-page {
   background-color: #223843;
-  /* display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  position: relative; */
+  position: relative;
+  height: 100vh;
 }
-/* .Container {
-  background-color: #223843;
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  text-decoration: none;
+}
+.Home-Header {
+  margin: 1%;
+}
+.Home-Content {
+  background-image: url("Renke_at_Oia.jpg");
+  /* max-height: 852px; */
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+
+}
+
+.intro-box {
+  margin: 20%;
   width: 100%;
-  position: relative;
-} */
-.header {
-  background-color: #223843;
-  /* height: 160px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1440px; */
-}
-
-/* 
-.home-page .overlap {
-  height: 650px;
-  left: 119px;
-  position: absolute;
-  top: 250px;
-  width: 1205px;
-}
-
-.home-page .picture {
-  background-color: #ffffff;
-  height: 650px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 600px;
-}
-
-.home-page .text-wrapper {
-  color: #000000;
-  font-family: "Kaisei HarunoUmi-Regular", Helvetica;
-  font-size: 32px;
-  font-weight: 400;
-  left: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 15px;
-  width: 301px;
-}
-
-.home-page .introduction {
-  border: 9px solid;
-  border-color: #ff8900;
   height: 420px;
-  left: 535px;
-  position: absolute;
-  top: 115px;
-  width: 670px;
-}
-
-.home-page .HELLO-welcome-to-my {
-  color: #ffffff;
-  font-family: "Kaisei HarunoUmi-Regular", Helvetica;
-  font-size: 32px;
-  font-weight: 400;
-  left: 103px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 30px;
-  width: 553px;
-}
-
-.home-page .header {
-  background-color: #223843;
-  height: 160px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1440px;
-}
-
-.home-page .overlap-group {
-  background-color: #d9d9d9;
-  border-radius: 8px;
-  height: 110px;
-  left: 30px;
-  position: relative;
-  top: 30px;
-  width: 1380px;
-}
-
-.home-page .text-wrapper-2 {
-  -webkit-text-stroke: 1px #000000;
-  color: #000000;
-  font-family: "Kaisei HarunoUmi-Regular", Helvetica;
-  font-size: 36px;
-  font-weight: 400;
-  left: 21px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 23px;
-  width: 200px;
-}
-
-.home-page .nav-bar {
-  height: 110px;
-  left: 780px;
-  position: absolute;
-  top: 0;
-  width: 600px;
-}
-
-.home-page .works-button {
-  align-items: center;
-  background-color: #48654e;
-  border-radius: 8px;
-  display: inline-flex;
-  gap: 10px;
-  justify-content: center;
-  left: 220px;
+  background-color: #B45600;
   opacity: 0.8;
-  padding: 10px;
-  position: absolute;
-  top: 30px;
-}
+  border-radius: 15px;
+  -moz-border-radius: 15px;
 
-.home-page .text-wrapper-3 {
-  color: #ffffff;
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  width: fit-content;
+  padding: 15px;
+    float:left;
+  /* position: absolute; */
 }
-
-.home-page .about-me-button {
-  align-items: center;
-  background-color: #48654e;
-  border-radius: 8px;
-  display: inline-flex;
-  gap: 10px;
-  justify-content: center;
-  left: 390px;
-  opacity: 0.8;
-  padding: 10px;
-  position: absolute;
-  top: 30px;
-} */
