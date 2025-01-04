@@ -6,7 +6,7 @@ function AboutPage() {
   const { pathname } = useLocation();
 
   return (
-    <div className="about-page">
+    <section className="about-page">
       <div className="div">
         <header className="header">
           <div className="overlap-group">
@@ -51,7 +51,7 @@ function AboutPage() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

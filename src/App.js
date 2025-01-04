@@ -7,7 +7,7 @@ import ProjectsPage from "./ProjectsPage/Project";
 
 function App() {
   return (
-    <div>
+    <section>
       <HashRouter>
         <Routes>
           <Route path="/" element={<Navigate to="/Home" />} />
@@ -16,7 +16,7 @@ function App() {
           <Route path="/Projects" element={<ProjectsPage />} />
         </Routes>
       </HashRouter>
-    </div>
+    </section>
   );
 }
 

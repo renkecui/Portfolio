@@ -1,18 +1,29 @@
 .home-page {
   background-color: #223843;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: relative; */
+}
+/* .Container {
+  background-color: #223843;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-}
-
-.home-page .div {
-  background-color: #223843;
-  height: 1024px;
   position: relative;
-  width: 1440px;
+} */
+.header {
+  background-color: #223843;
+  /* height: 160px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px; */
 }
 
+/* 
 .home-page .overlap {
   height: 650px;
   left: 119px;
@@ -145,4 +156,4 @@
   padding: 10px;
   position: absolute;
   top: 30px;
-}
+} */
