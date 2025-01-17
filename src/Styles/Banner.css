@@ -1,0 +1,28 @@
+.banner {
+    margin-top: 0;
+    padding: 260px 0 100px 0;
+}
+
+.banner h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.banner .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    height: 100dvh;
+    min-height: 500px;
+}
+
+.container span {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+
+}
