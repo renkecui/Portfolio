@@ -26,6 +26,7 @@
 .banner .info .h1 {
     font-size: 64px;
     font-family: var(--font-family);
+    font-weight: 700;
     text-transform: uppercase;
 }
 

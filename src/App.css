@@ -9,7 +9,9 @@
   /* Ensure this variable is defined */
   --form-text-color: #ffffff;
   --footer-text-color: #ffffff;
-  --font-family: 'Rubik', sans-serif;
+  --font-family: 'Roboto Mono', monospace;
+
+  --bs-body-font-weight: 300;
 
 }
 
