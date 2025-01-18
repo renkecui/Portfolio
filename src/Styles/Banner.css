@@ -1,13 +1,6 @@
 .banner {
     margin-top: 0;
-    padding: 260px 0 100px 0;
-}
-
-.banner h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    padding: 0px 0 100px 0;
 }
 
 .banner .container {
@@ -15,14 +8,17 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    text-align: center;
+    text-align: left;
     height: 100dvh;
     min-height: 500px;
 }
 
-.container span {
+.banner .info {
     display: flex;
-    gap: 25px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.banner .description {
+    /* max-width: 24ch; */
 }
