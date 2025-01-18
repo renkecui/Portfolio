@@ -1,12 +1,17 @@
 #root {
   background-color: #223843 !important;
+  --bs-heading-color: #ffffff;
+  --bs-body-color: #ffffff;
   --btn-color: #0987f2;
   --btn-text-color: #ffffff;
   --project-card-bg: #ffffff00;
-  --text-color: #ffffff; /* Ensure this variable is defined */
+  --text-color: #ffffff;
+  /* Ensure this variable is defined */
   --form-text-color: #ffffff;
   --footer-text-color: #ffffff;
-} 
+  --font-family: 'Rubik', sans-serif;
+
+}
 
 /* [data-theme='dark'] {
   --background-color: #222;
@@ -18,47 +23,47 @@
   --footer-text-color: #bbb;
 } */
 
-#root {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
 .body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color:  var(--background-color) !important;
-  color: #fff !important;
+  background-color: var(--background-color) !important;
   font-family: 'Centra', sans-serif !important;
 }
 
 
-.h1, .h2, .h3, .p {
+.h1,
+.h2,
+.h3,
+.p {
   color: var(--text-color);
   margin: 0;
   padding: 0;
 }
 
-.h2, .h3, .p {
+.h2,
+.h3,
+.p {
   font-family: 'Roboto Mono', monospace;
 }
 
-.h1, .h2 {
+.h1,
+.h2 {
   text-transform: uppercase;
 }
 
-.h2, .h3 {
+.h2,
+.h3 {
   font-size: 20px;
 }
 
 .h1 {
   font-family: 'Rubik', sans-serif;
-  font-size: 32px;
+  font-size: 64px;
+  font-weight: 700;
 }
 
 .p {
   font-size: 16px;
   font-weight: 300;
 }
-
