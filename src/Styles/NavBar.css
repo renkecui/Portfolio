@@ -22,16 +22,4 @@
     color: #ffffff;
     text-decoration: none;
   }
-  .intro-box {
-    margin: 20%;
-    width: 100%;
-    height: 420px;
-    background-color: #B45600;
-    opacity: 0.8;
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-  
-    padding: 15px;
-      float:left;
-    /* position: absolute; */
-  }
+ 
