@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# ESLint cache
+.eslintcache
+
+# npm / Yarn / pnpm logs & lockfiles
+*.log
+*.lock
+
+# npm cache
+*.pack
+
+# VS Code settings
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Build output
+/dist/
+/build/

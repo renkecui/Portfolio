@@ -1,104 +1,78 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import logoIMG from "../assets/RC_LOGO.png";
+import linkedinLogo from "../assets/linkedinLogo.svg";
 import "../Styles/NavBar.css";
-import { Navbar, Nav, Container, Col, Row, Button } from "react-bootstrap";
-import logoIMG from "../Resources/RC_LOGO.png";
-import { BrowserRouter as Router } from "react-router-dom";
-import { useState, useEffect } from "react";
-import linkedinLogo from "../Resources/linkedinLogo.svg";
 
-export const NavBar = () => {
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState("Home");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      window.scrollY > 100 ? setScrolled(true) : setScrolled(false);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
     };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const onUpdateActiveLink = (link) => {
+  const handleLinkClick = (link) => {
     setActiveLink(link);
   };
+
   const openResume = () => {
-    //TODO: fix this link so that it opens the resume in a new tab
-    window.open("src/assets/Resume_2024.pdf", "_blank");
+    window.open("/assets/Resume_2024.pdf", "_blank"); // public/assets/Resume_2024.pdf
   };
 
   return (
-    <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-        <Container>
-          <Navbar.Brand
-            href="#Home"
-            className={
-              activeLink === "home" ? "active navbar-link" : "navbar-link"
-            }
-            onClick={() => onUpdateActiveLink("Home")}
-          >
-            <img src={logoIMG} alt="Renke_Cui_Logo" height="100" />{" "}
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarNavAltMarkup" />
-          <Navbar.Collapse id="navbarNavAltMarkup">
-            <Nav className="navbar-nav">
+    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Container>
+        <Navbar.Brand href="#Home" onClick={() => handleLinkClick("Home")}>
+          <img src={logoIMG} alt="Renke Cui Logo" height="100" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarNav" />
+        <Navbar.Collapse id="navbarNav">
+          <Nav className="ms-auto align-items-center">
+            {["Home", "Skills", "Projects"].map((section) => (
               <Nav.Link
-                href="#Home"
-                className={
-                  activeLink === "home" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("Home")}
+                key={section}
+                href={`#${section}`}
+                className={`navbar-link ${
+                  activeLink === section ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick(section)}
               >
-                Home
+                {section}
               </Nav.Link>
-              <Nav.Link
-                href="#Skills"
-                className={
-                  activeLink === "Skills" ? "active navbar-link" : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("Skills")}
+            ))}
+            <Nav.Link onClick={openResume}>
+              <Button variant="secondary">Resume</Button>
+            </Nav.Link>
+            <Nav.Link
+              href="https://www.linkedin.com/in/renkecui/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="d-flex align-items-center"
+            >
+              <img
+                src={linkedinLogo}
+                alt="LinkedIn"
+                style={{ width: "30px", height: "30px" }}
+              />
+            </Nav.Link>
+            <Nav.Link>
+              <Button
+                variant="secondary"
+                className="contact-button"
+                onClick={() => console.log("connect")}
               >
-                Skills
-              </Nav.Link>
-              <Nav.Link
-                href="#Projects"
-                className={
-                  activeLink === "projects"
-                    ? "active navbar-link"
-                    : "navbar-link"
-                }
-                onClick={() => onUpdateActiveLink("Projects")}
-              >
-                Projects
-              </Nav.Link>
-              <Nav.Link onClick={openResume}>
-                <Button variant="secondary">Resume</Button>{" "}
-              </Nav.Link>
-              {/* <span className="navbar-text"> */}
-              <div className="social-icon">
-                <a href="https://www.linkedin.com/in/renkecui/">
-                  <img
-                    src={linkedinLogo}
-                    alt="LinkedIn Logo"
-                    style={{ width: "50px", height: "50px" }}
-                  />
-                </a>
-              </div>
-              <Nav.Link>
-                {" "}
-                <Button
-                  variant="secondary"
-                  className="contact-button"
-                  onClick={() => console.log("connect")}
-                >
-                  Contact
-                </Button>
-              </Nav.Link>{" "}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </Router>
+                Contact
+              </Button>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
