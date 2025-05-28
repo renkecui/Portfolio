@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.4ce9f0e5.css",
+    "main.js": "/portfolio/static/js/main.715499e4.js",
+    "static/media/Renke_at_Oia.jpg": "/portfolio/static/media/Renke_at_Oia.6137860e265872c85058.jpg",
+    "static/media/Sloth_Gym.png": "/portfolio/static/media/Sloth_Gym.f08ea927cfa06918696e.png",
+    "static/media/LakersLogo.png": "/portfolio/static/media/LakersLogo.11ecba10617ee0dc4737.png",
+    "static/media/github-mark.svg": "/portfolio/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
+    "index.html": "/portfolio/index.html",
+    "main.4ce9f0e5.css.map": "/portfolio/static/css/main.4ce9f0e5.css.map",
+    "main.715499e4.js.map": "/portfolio/static/js/main.715499e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ce9f0e5.css",
+    "static/js/main.715499e4.js"
+  ]
+}

@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# cache and logs
+.eslintcache
+*.log
+
+# build output
+/dist/
+/build/
+
+# system files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
