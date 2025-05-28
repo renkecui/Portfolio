@@ -1,25 +1,54 @@
-.home-page {
-    background-color: #223843;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    height: 100vh;
-  }
-  
-  .logo {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .nav-link {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .nav-link.active {
-    color: #ffffff;
-    text-decoration: none;
-  }
- 
+
+.custom-navbar {
+  transition: all 0.3s ease-in-out;
+  /* background-color: #223843; */
+  padding: 10px 20px;
+  /* margin-bottom: 180px; */
+}
+
+.custom-navbar.scrolled {
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+  background-color: #223843;
+}
+
+.logo {
+  transition: height 0.3s ease;
+}
+
+.nav-link,
+.custom-button {
+  font-size: 1.1rem;   
+  font-weight: 700;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+  transition: background-color 0.3s ease;
+  /* background-color: transparent; */
+  border: none;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background-color: #0075f2;
+  /* text-decoration: underline; */
+}
+
+.nav-link.active{
+  color: #fff;
+}
+
+.navbar-nav .nav-link.active {
+  color: #eee !important;
+}
+
+
+/* .custom-button {
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: none;
+} */
+
+/* .custom-button:hover {
+  background-color: #0075f2;
+} */

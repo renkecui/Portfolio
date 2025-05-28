@@ -1,28 +1,79 @@
-import React from 'react';
-import './Styles.Css'; // Import external CSS
-import profileImg from '../assets/Renke_at_Oia.jpg'; // Adjust path if needed
-
+import React from "react";
+import "../Styles/Banner.css";
+import profileImg from "../assets/Renke_at_Oia.jpg";
+import linkedinLogo from "../assets/LI-In-Bug.png";
+import githubLogo from "../assets/github-mark.svg";
+import { Col, Container, Row, Button } from "react-bootstrap";
 const Banner = () => {
+  const openResume = () => {
+    window.open("/assets/Resume_2024.pdf", "_blank");
+  };
+  const openGithub = () => {
+    window.open("/assets/Resume_2024.pdf", "_blank");
+  };
+  const openLinkedin = () => {
+    window.open("/assets/Resume_2024.pdf", "_blank");
+  };
+
   return (
-    <section className="banner">
-      <img src={profileImg} alt="Profile" className="banner-image" />
-      <h1 className="banner-name">Renke Cui</h1>
-      <p className="banner-intro">
-        I'm a Computer Engineering student passionate about full-stack development,
-        data-driven design, and building intuitive user experiences.
-      </p>
+    <section id="Home" className="banner">
+      <Container>
+        <Row>
+          <Col className="banner-text d-flex align-items-center">
+            <div>
+              <h1 className="banner-name">Renke Cui</h1>
+              <p className="banner-intro">
+                I'm a senior at Northeastern University majoring in{" "}
+                <strong>Computer Engineering and Computer Science</strong> with
+                a minor in Business administration. I’m driven by the challenge
+                of applying technology to create solutions that make life
+                better.
+              </p>
+              <div className="d-flex justify-content-center align-items-center gap-2">
+                <Button className="custom-button" onClick={openResume}>
+                  Resume
+                </Button>
+                <a
+                  href="https://github.com/renkecui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="d-flex align-items-center"
+                >
+                  <img src={githubLogo} alt="GitHub" className="Icon-Links" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/renkecui/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="d-flex align-items-center"
+                >
+                  <img
+                    src={linkedinLogo}
+                    alt="LinkedIn"
+                    className="Icon-Links  LinkedIn-Icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </Col>
+
+          <Col>
+            <img src={profileImg} alt="Profile" className="banner-image" />
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };
 
 export default Banner;
 
-
-
-{/* <h1>Renke Cui</h1>
+{
+  /* <h1>Renke Cui</h1>
 <h2>Software Developer</h2>
 <p className="description">
   I'm a student at Northeastern university majoring in Computer
   Engineering and Computer Science with a minor in Business
   administration. I enjoy the challenge of always learning
-  something new. */}
+  something new. */
+}
