@@ -1,30 +1,12 @@
 import React, { useState } from "react";
 import "../Styles/Contact.css";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 const SERVICE_ID = "service_yfkze6q"; // 'YOUR_SERVICE_ID'
 const TEMPLATE_ID = "template_1amrabo"; // 'YOUR_TEMPLATE_ID'
 const PUBLIC_KEY = "y_GG6wHP_7HkvfHv3"; // 'YOUR_PUBLIC_KEY'
 
-emailjs.init({
-  publicKey: PUBLIC_KEY, // 'YOUR_PUBLIC_KEY'
-  // Do not allow headless browsers
-  blockHeadless: true,
-  blockList: {
-    // Block the suspended emails
-    list: ["foo@emailjs.com", "bar@emailjs.com"],
-    // The variable contains the email address
-    watchVariable: "userEmail",
-  },
-  limitRate: {
-    // Set the limit rate for the application
-    id: "app",
-    // Allow 1 request per 10s
-    throttle: 10000,
-  },
-});
-
-const Contact = () => {
+const ContactRestAPI = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,27 +35,32 @@ const Contact = () => {
       alert("Please enter a valid email address.");
       return;
     }
-    const templateParams = {
-      to_name: "Renke Cui", // 'YOUR_NAME'
-      from_name: name, // 'YOUR_NAME
-      reply_to: email, // 'YOUR_EMAIL
-      message: message, // 'YOUR_MESSAGE'
+    // code fragment
+    var data = {
+      service_id: SERVICE_ID,
+      template_id: TEMPLATE_ID,
+      user_id: PUBLIC_KEY,
+      template_params: {
+        to_name: "Renke Cui", // 'YOUR_NAME'
+        from_name: name, // 'YOUR_NAME
+        reply_to: email, // 'YOUR_EMAIL
+        message: message, // 'YOUR_MESSAGE'F
+      },
     };
 
-    await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams).then(
-      (response) => {
-        setFormData({ name: "", email: "", message: "" });
-        console.log("SUCCESS!", response.status, response.text);
-      },
-      (error) => {
-        console.error("EmailJS error:", error);
-      }
-    );
+    try {
+      const response = await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
+      console.log("SUCCESS!", response.status, response.text);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS send failed:", error);
+      alert("There was an error sending your message.");
+    }
   };
 
   return (
     <section id="Contact" className="contact-section">
-      <h2 className="section-title ">Contact Me</h2>
+      <h2 className="section-title">Contact Me</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -104,4 +91,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactRestAPI;
