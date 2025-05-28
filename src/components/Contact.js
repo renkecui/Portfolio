@@ -16,17 +16,30 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
+  e.preventDefault();
 
-    // TODO: replace with email API or backend integration
-    alert('Message sent!');
-    setFormData({ name: '', email: '', message: '' });
-  };
+  const { name, email, message } = formData;
+
+  if (!name || !email || !message) {
+    alert('Please fill out all fields.');
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  console.log('Form submitted:', formData);
+  alert('Message sent!');
+  setFormData({ name: '', email: '', message: '' });
+};
+
 
   return (
     <section id="Contact" className="contact-section">
-      <h2 className="contact-heading">Contact Me</h2>
+      <h2 className="section-title ">Contact Me</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"

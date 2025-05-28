@@ -12,7 +12,7 @@ const skillsData = {
 const Skills = () => {
   return (
     <section id="Skills" className="skills-section">
-      <h2 className="skills-title">Skills</h2>
+      <h2 className="section-title">Skills</h2>
 
       {Object.entries(skillsData).map(([category, skills]) => (
         <div key={category} className="skills-category">

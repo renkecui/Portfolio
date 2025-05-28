@@ -8,13 +8,6 @@ const Banner = () => {
   const openResume = () => {
     window.open("/assets/Resume_2024.pdf", "_blank");
   };
-  const openGithub = () => {
-    window.open("/assets/Resume_2024.pdf", "_blank");
-  };
-  const openLinkedin = () => {
-    window.open("/assets/Resume_2024.pdf", "_blank");
-  };
-
   return (
     <section id="Home" className="banner">
       <Container>

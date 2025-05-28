@@ -3,13 +3,7 @@
     /* background-color: #f7f9fc; */
     text-align: center;
   }
-  
-  .contact-heading {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    /* color: #333; */
-  }
-  
+
   .contact-form {
     max-width: 500px;
     margin: 0 auto;
