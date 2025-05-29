@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.4ce9f0e5.css",
-    "main.js": "/Portfolio/static/js/main.eb3d8b51.js",
+    "main.js": "/Portfolio/static/js/main.64d4ef8c.js",
     "static/media/Renke_at_Oia.jpg": "/Portfolio/static/media/Renke_at_Oia.6137860e265872c85058.jpg",
     "static/media/Sloth_Gym.png": "/Portfolio/static/media/Sloth_Gym.f08ea927cfa06918696e.png",
     "static/media/LakersLogo.png": "/Portfolio/static/media/LakersLogo.11ecba10617ee0dc4737.png",
     "static/media/github-mark.svg": "/Portfolio/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "index.html": "/Portfolio/index.html",
     "main.4ce9f0e5.css.map": "/Portfolio/static/css/main.4ce9f0e5.css.map",
-    "main.eb3d8b51.js.map": "/Portfolio/static/js/main.eb3d8b51.js.map"
+    "main.64d4ef8c.js.map": "/Portfolio/static/js/main.64d4ef8c.js.map"
   },
   "entrypoints": [
     "static/css/main.4ce9f0e5.css",
-    "static/js/main.eb3d8b51.js"
+    "static/js/main.64d4ef8c.js"
   ]
 }
