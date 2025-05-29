@@ -2,7 +2,6 @@ import React from "react";
 import "../Styles/ProjectCards.css";
 import GymAppSloth from "../assets/Sloth_Gym.png";
 import LakersLogo from "../assets/LakersLogo.png";
-import { Container } from "react-bootstrap";
 const projectData = [
   {
     title: "Slothethics",

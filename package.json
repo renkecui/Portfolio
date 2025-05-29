@@ -1,6 +1,6 @@
 {
-  "name": "personal-website",
-  "version": "0.1.0",
+  "name": "Portfolio",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://renkecui.github.io/Portfolio",
   "dependencies": {

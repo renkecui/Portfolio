@@ -60,13 +60,3 @@ const Banner = () => {
 };
 
 export default Banner;
-
-{
-  /* <h1>Renke Cui</h1>
-<h2>Software Developer</h2>
-<p className="description">
-  I'm a student at Northeastern university majoring in Computer
-  Engineering and Computer Science with a minor in Business
-  administration. I enjoy the challenge of always learning
-  something new. */
-}
