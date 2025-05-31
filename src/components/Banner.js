@@ -6,7 +6,7 @@ import githubLogo from "../assets/github-mark.svg";
 import { Col, Container, Row, Button } from "react-bootstrap";
 const Banner = () => {
   const openResume = () => {
-    window.open("/Renke_Resume.pdf", "_blank", "noopener,noreferrer");
+    window.open(`${process.env.PUBLIC_URL}/assets/Renke_Cui_Resume.pdf`, "_blank", "noopener,noreferrer");
   };
 
 
