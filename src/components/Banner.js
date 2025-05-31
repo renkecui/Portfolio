@@ -7,7 +7,7 @@ import resumePDF from "../../public/Renke_Cui_Resume.pdf";
 import { Col, Container, Row, Button } from "react-bootstrap";
 const Banner = () => {
   const openResume = () => {
-    window.open(resumePDF, "_Renke_Resume");
+    window.open(resumePDF, "_blank", "noopener,noreferrer");
   };
 
 
