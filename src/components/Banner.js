@@ -3,11 +3,14 @@ import React, { useState, useEffect } from "react";
 import profileImg from "../assets/Renke_at_Oia.jpg";
 import linkedinLogo from "../assets/LI-In-Bug.png";
 import githubLogo from "../assets/github-mark.svg";
+import resumePDF from "../assets/Renke_Resume.pdf";
 import { Col, Container, Row, Button } from "react-bootstrap";
 const Banner = () => {
   const openResume = () => {
-    window.open("/assets/Resume_2024.pdf", "_blank");
+    window.open(resumePDF, "_Renke_Resume");
   };
+
+
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
