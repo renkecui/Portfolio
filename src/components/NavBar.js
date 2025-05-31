@@ -35,7 +35,6 @@ const NavBar = () => {
           <img
             src={logoIMG}
             alt="Renke Cui Logo"
-            height="60"
             className="logo"
           />
         </Navbar.Brand>

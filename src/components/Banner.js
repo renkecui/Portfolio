@@ -49,8 +49,7 @@ const Banner = () => {
               </div>
             </div>
           </Col>
-
-          <Col>
+          <Col className="d-flex justify-content-center align-items-center">
             <img src={profileImg} alt="Profile" className="banner-image" />
           </Col>
         </Row>
