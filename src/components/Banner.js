@@ -3,11 +3,10 @@ import React, { useState, useEffect } from "react";
 import profileImg from "../assets/Renke_at_Oia.jpg";
 import linkedinLogo from "../assets/LI-In-Bug.png";
 import githubLogo from "../assets/github-mark.svg";
-import resumePDF from "../../public/Renke_Cui_Resume.pdf";
 import { Col, Container, Row, Button } from "react-bootstrap";
 const Banner = () => {
   const openResume = () => {
-    window.open(resumePDF, "_blank", "noopener,noreferrer");
+    window.open("/Renke_Cui_Resume.pdf'", "_blank", "noopener,noreferrer");
   };
 
 
