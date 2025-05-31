@@ -6,45 +6,53 @@ import "../Styles/NavBar.css";
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("Home");
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
+      setScrolled(window.scrollY > 120);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLinkClick = (e, section) => {
-    e.preventDefault(); // prevent anchor jump
+    e.preventDefault();
     setActiveLink(section);
-    const el = document.getElementById(section);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    setExpanded(false); // collapse first to avoid layout shift
+
+    setTimeout(() => {
+      const el = document.getElementById(section);
+      if (el) {
+        const yOffset = -128;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 150); // small delay to allow collapse to animate
   };
 
   return (
-    <Navbar
-      expand="md"
-      fixed="top"
-      className={`custom-navbar ${scrolled ? "scrolled" : ""}`}
-    >
-      <Container fluid="lg">
-        <Navbar.Brand href="#Home" onClick={(e) => handleLinkClick(e, "Home")}>
-          <img
-            src={logoIMG}
-            alt="Renke Cui Logo"
-            className="logo"
-          />
-        </Navbar.Brand>
-
-        <Navbar.Toggle aria-controls="navbarNav" />
-        <Navbar.Collapse id="navbarNav">
-          <div className="w-100 d-flex justify-content-between align-items-center">
-            {/* Centered Links */}
-            <Nav className="mx-auto d-flex gap-3">
-              {["Home", "Skills", "Projects"].map((section) => (
+    <>
+      <Navbar
+        expand="md"
+        fixed="top"
+        expanded={expanded}
+        onToggle={() => setExpanded((prev) => !prev)}
+        className={`custom-navbar ${scrolled ? "scrolled" : ""}`}
+        // bg="light"
+        // variant="light"
+      >
+        <Container>
+          <Navbar.Brand
+            href="#Home"
+            onClick={(e) => handleLinkClick(e, "Home")}
+          >
+            <img src={logoIMG} alt="Renke Cui Logo" className="logo" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarNav" />
+          <Navbar.Collapse id="navbarNav">
+            <Nav className="mx-auto d-flex flex-column flex-md-row align-items-center gap-3">
+              {["Home", "Skills", "Projects", "Contact"].map((section) => (
                 <Nav.Link
                   key={section}
                   href={`#${section}`}
@@ -57,23 +65,19 @@ const NavBar = () => {
                 </Nav.Link>
               ))}
             </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-            {/* Right-Aligned Buttons */}
-            <div className="d-flex align-items-center gap-2">
-              <Nav.Link
-                href="#Contact"
-                className={`nav-link ${
-                  activeLink === "Contact" ? "active" : ""
-                }`}
-                onClick={(e) => handleLinkClick(e, "Contact")}
-              >
-                Contact
-              </Nav.Link>
-            </div>
-          </div>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      {/* Spacer to prevent content being hidden behind fixed navbar */}
+      {/* <div style={{ height: expanded ? "304px" : "120px", transition: "height 0.3s ease" }} /> */}
+      <div
+        style={{
+          height: expanded ? "316px" : "128px",
+          transition: "height 0.3s ease",
+        }}
+      />
+    </>
   );
 };
 

@@ -1,17 +1,46 @@
+/* Color Theme
+#E5FCC2 cool greenish yellow
+#9DE0AD light green 
+#45ADA8 teal
+#547980 cool grayish blue
+#594F4F Brown
+ - #4B4343 Darker Brown
+ - #3e3737 Darkest Brown
+#363636 Dark gray
+*/
+
+/* Global Styles */
+:root {
+  --background-color: #547980;
+  --primary-color: #3e3737; /* brown */
+  --secondary-color:  #E5FCC2; /* cool greenish yellow */
+  --tertiary-color: #45ADA8; /* teal */ 
+  --quaternary-color:  #9DE0AD; /* light green */
+  --quinary-color: #363636; /* dark gray */
+}
+
 #root {
-  background-color: #223843 !important;
-  --bs-heading-color: #ffffff;
+    background-color: var(--background-color) !important;
+  --bs-heading-color: var(--primary-color);
+  --Navbar-text-color: var(--primary-color);
+  --Navbar-Active-text-color: #9DE0AD;
+  --navbar-scrolled-bg: #45ADA8;
+
   --bs-body-color: #ffffff;
-  --btn-color: #0987f2;
-  --btn-text-color: #ffffff;
+  /* Button Color */
+  --btn-background-color: var(--primary-color);
+  --btn-text-color: #9DE0AD;
   /* --project-card-bg: #ffffff00; */
-  --text-color: #ffffff;
+  --text-color: var(--primary-color);
   /* Ensure this variable is defined */
   --form-text-color: #ffffff;
-  --footer-text-color: #ffffff;
   --font-family: 'Poppins', sans-serif;
   --bs-body-font-weight: 300;
+  
 
+  /* Footer Colors */
+  --footer-bg-color: #363636;
+  --footer-text-color: #ccc;
 }
 
 .body {
@@ -31,6 +60,10 @@
 }
 
 section {
-  scroll-margin-top: 50px;
+  scroll-margin-top: 128px;
+  /* scroll-margin-bottom: -128px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 80px;
+  /* margin-top: 100px;  Pull the anchor up so it’s not too far down */
 }
-

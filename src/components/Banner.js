@@ -1,5 +1,5 @@
-import React from "react";
 import "../Styles/Banner.css";
+import React, { useState, useEffect } from "react";
 import profileImg from "../assets/Renke_at_Oia.jpg";
 import linkedinLogo from "../assets/LI-In-Bug.png";
 import githubLogo from "../assets/github-mark.svg";
@@ -8,8 +8,21 @@ const Banner = () => {
   const openResume = () => {
     window.open("/assets/Resume_2024.pdf", "_blank");
   };
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 120);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section id="Home" className="banner">
+    <section
+      id="Home"
+      className={`banner ${scrolled ? "banner-scrolled" : ""}`}
+    >
       <Container>
         <Row>
           <Col className="banner-text d-flex align-items-center">

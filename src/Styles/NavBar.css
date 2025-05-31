@@ -1,13 +1,14 @@
 .custom-navbar {
   transition: all 0.3s ease-in-out;
   /* background-color: #223843; */
-  padding: 10px 20px;
+  padding: 14px 20px;
   /* margin-bottom: 180px; */
 }
 
 .custom-navbar.scrolled {
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
-  background-color: #223843;
+  background-color: var(--navbar-scrolled-bg);
+  opacity: 0.75;
 }
 
 .logo {
@@ -17,11 +18,12 @@
 }
 
 .nav-link,
+.navbar-nav,
 .custom-button {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #fff;
-  padding: 6px 8px;
+  color: var(--Navbar-text-color);
+  padding: 0px 8px;
   border-radius: 6px;
   transition: color 0.2s ease;
   transition: background-color 0.3s ease;
@@ -29,14 +31,11 @@
 }
 
 .nav-link:hover {
-  color: #fff;
-  background-color: #0075f2;
-}
-
-.nav-link.active {
-  color: #fff;
+  color: var(--Navbar-Active-text-color);
+  background-color: var(--btn-background-color);
 }
 
 .navbar-nav .nav-link.active {
-  color: #eee !important;
+  color: var(--Navbar-Active-text-color);
 }
+

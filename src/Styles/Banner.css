@@ -1,57 +1,65 @@
-
-
 .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 160px;
-    padding-bottom: 130px;
-    padding-left:  20px;
-    padding-right: 20px;
-    text-align: center;
-  }
-  
-  .banner-image {
-    width: 480px;
-    height: 480px;
-    border-radius: 10%;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 122px;
+  /* padding-left:  20px;
+    padding-right: 20px; */
+  /* transition: padding-top 0.3s ease; */
+  text-align: center;
+}
 
-  .banner-name {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .banner-intro {
-    font-size: 1.3rem;
-    color: #ffffff;
-    max-width: 600px;
-  }
-  
-  .custom-button {
-    font-size: 1.25rem;   
-    font-weight: 700;
-    color: #eee;
-    padding: 6px 8px;
-    border-radius: 6px;
-    transition: color 0.2s ease;
-    transition: background-color 0.3s ease;
-    background-color: transparent;
-    border: none;
-  }
-  .Icon-Links {
-    height: 50px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 1px;
-    object-fit: cover;
-  }
-  
-  .LinkedIn-Icon {
-    border-radius: 5%;
-    background-color: transparent;
-  }
-  
+/* .banner-scrolled {
+  padding-top: 120px;
+} */
+
+.banner-image {
+  width: 480px;
+  height: 480px;
+  border-radius: 10%;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.banner-name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.banner-intro {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  max-width: 600px;
+}
+
+.custom-button {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--btn-background-color);
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: none;
+}
+
+.custom-button:hover {
+  color: var(--btn-text-color);
+  background-color: var(--btn-background-color);
+}
+
+.Icon-Links {
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 1px;
+  object-fit: cover;
+}
+
+.LinkedIn-Icon {
+  border-radius: 5%;
+  background-color: transparent;
+}
