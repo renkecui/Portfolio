@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.05a9fc9f.css",
-    "main.js": "/Portfolio/static/js/main.bb0bec16.js",
+    "main.css": "/Portfolio/static/css/main.6c5cfd27.css",
+    "main.js": "/Portfolio/static/js/main.8ce9560a.js",
     "static/media/Renke_at_Oia.jpg": "/Portfolio/static/media/Renke_at_Oia.6137860e265872c85058.jpg",
     "static/media/Sloth_Gym.png": "/Portfolio/static/media/Sloth_Gym.f08ea927cfa06918696e.png",
     "static/media/LakersLogo.png": "/Portfolio/static/media/LakersLogo.11ecba10617ee0dc4737.png",
     "static/media/github-mark.svg": "/Portfolio/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "index.html": "/Portfolio/index.html",
-    "main.05a9fc9f.css.map": "/Portfolio/static/css/main.05a9fc9f.css.map",
-    "main.bb0bec16.js.map": "/Portfolio/static/js/main.bb0bec16.js.map"
+    "main.6c5cfd27.css.map": "/Portfolio/static/css/main.6c5cfd27.css.map",
+    "main.8ce9560a.js.map": "/Portfolio/static/js/main.8ce9560a.js.map"
   },
   "entrypoints": [
-    "static/css/main.05a9fc9f.css",
-    "static/js/main.bb0bec16.js"
+    "static/css/main.6c5cfd27.css",
+    "static/js/main.8ce9560a.js"
   ]
 }
