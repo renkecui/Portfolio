@@ -5,14 +5,14 @@ import LakersLogo from "../assets/LakersLogo.png";
 const projectData = [
   {
     title: "Slothethics",
-    description: "A workout tracking app to plan and monitor fitness routines",
+    description: "Workout tracking app to plan and monitor fitness routines",
     image: GymAppSloth,
     link: "https://github.com/renkecui/GymApp",
   },
   {
     title: "NBA Statistics Website",
     description:
-      "A webpage for basketball fans to analyze historical NBA data with API integration",
+      "Webpage for basketball fans to analyze historical NBA data with API integration",
     image: LakersLogo,
     link: "https://github.com/renkecui/sports-statistics-site",
   },

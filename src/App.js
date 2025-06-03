@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import Banner from "./components/Banner";
 import Skills from './components/Skills';
+import Experience from "./components/Experience";
 import ProjectCards from "./components/ProjectCards";
 import ContactRestAPI from "./components/ContactRestAPI";
 import Footer from "./components/Footer";
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
+      <Experience />
       <ProjectCards />
       {/* <Contact /> */}
       <ContactRestAPI />

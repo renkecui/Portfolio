@@ -29,15 +29,17 @@
 }
 
 .banner-intro {
-  font-size: 1.3rem;
+  text-align: left;
+  font-size: 1.35rem;
+  font-weight: 500;
   color: var(--text-color);
   max-width: 600px;
 }
 
 .custom-button {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--btn-background-color);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--quinary-color);
   padding: 6px 8px;
   border-radius: 6px;
   transition: color 0.2s ease;

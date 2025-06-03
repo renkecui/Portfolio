@@ -1,17 +1,16 @@
 /* Skills.css */
-  .skills-section {
-  /* padding: 80px 20px; */
-  /* background-color: #f9fafb; */
-    /* padding-top: 0px; */
+.skills-section {
   text-align: center;
 }
 
 .skills-category {
+  font-size: 1.6rem;
+  font-weight: 600;
   margin-bottom: 40px;
 }
 
 .skills-category-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -24,8 +23,8 @@
 }
 
 .skill-pill {
-  background-color: #e6f0ff;
-  color: #111;
+  background-color: var(--btn-background-color);
+  color: var(--btn-text-color);
   padding: 8px 16px;
   border-radius: 999px;
   font-size: 0.95rem;
@@ -34,6 +33,7 @@
 }
 
 .skill-pill:hover {
+  background-color: var(--btn-background-color);
   transform: scale(1.05);
-  background-color: #d0e5ff;
+  /* background-color: var(--btn-hover-background-color); */
 }

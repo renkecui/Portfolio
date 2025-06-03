@@ -37,5 +37,15 @@
 
 .navbar-nav .nav-link.active {
   color: var(--Navbar-Active-text-color);
+  background-color: var(--btn-background-color);
 }
 
+
+/* .custom-navbar.section-home,
+.custom-navbar.section-skills,
+.custom-navbar.section-experience,
+.custom-navbar.section-projects,
+.custom-navbar.section-contact {
+  background-color: aquamarine;
+  color: var(--Navbar-Active-text-color);
+} */

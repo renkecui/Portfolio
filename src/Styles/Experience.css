@@ -1,0 +1,67 @@
+.experience-section {
+    padding: 60px 20px;
+    /* background-color: #f9f9f9; */
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    text-align: left;
+    background: var(--card-bg-color);
+    border-radius: 12px;
+    padding: 54px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.experience-card .at {
+    font-weight: normal;
+    color: var(--text-primary-color);
+}
+
+.experience-card .date {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary-color);
+    margin-bottom: 10px;
+}
+
+/* .experience-card ul {
+    padding-left: 80px;
+} */
+
+.experience-card li {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: var(--text-primary-color);
+}
+
+.skill-pill {
+  background-color: var(--btn-background-color);
+  color: var(--btn-text-color);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.skill-pill:hover {
+  background-color: var(--btn-background-color);
+  transform: none !important;
+  box-shadow: none !important;
+}

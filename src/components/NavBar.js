@@ -5,9 +5,11 @@ import "../Styles/NavBar.css";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("Home");
+  const [currentSection, setCurrentSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
+  // Set scrolled state
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 120);
@@ -16,10 +18,34 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Observe current section in view
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target.id) {
+            setCurrentSection(entry.target.id.toLowerCase());
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const capitalized =
+      currentSection.charAt(0).toUpperCase() + currentSection.slice(1);
+    setActiveLink(capitalized);
+  }, [currentSection]);
+
   const handleLinkClick = (e, section) => {
     e.preventDefault();
-    setActiveLink(section);
-    setExpanded(false); // collapse first to avoid layout shift
+    setExpanded(false);
 
     setTimeout(() => {
       const el = document.getElementById(section);
@@ -28,7 +54,7 @@ const NavBar = () => {
         const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
-    }, 150); // small delay to allow collapse to animate
+    }, 150);
   };
 
   return (
@@ -38,9 +64,9 @@ const NavBar = () => {
         fixed="top"
         expanded={expanded}
         onToggle={() => setExpanded((prev) => !prev)}
-        className={`custom-navbar ${scrolled ? "scrolled" : ""}`}
-        // bg="light"
-        // variant="light"
+        className={`custom-navbar ${
+          scrolled ? "scrolled" : ""
+        } section-${currentSection}`}
       >
         <Container>
           <Navbar.Brand
@@ -52,25 +78,26 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="navbarNav" />
           <Navbar.Collapse id="navbarNav">
             <Nav className="mx-auto d-flex flex-column flex-md-row align-items-center gap-3">
-              {["Home", "Skills", "Projects", "Contact"].map((section) => (
-                <Nav.Link
-                  key={section}
-                  href={`#${section}`}
-                  className={`nav-link ${
-                    activeLink === section ? "active" : ""
-                  }`}
-                  onClick={(e) => handleLinkClick(e, section)}
-                >
-                  {section}
-                </Nav.Link>
-              ))}
+              {["Home", "Skills", "Experience", "Projects", "Contact"].map(
+                (section) => (
+                  <Nav.Link
+                    key={section}
+                    href={`#${section}`}
+                    className={`nav-link ${
+                      activeLink === section ? "active" : ""
+                    }`}
+                    onClick={(e) => handleLinkClick(e, section)}
+                  >
+                    {section}
+                  </Nav.Link>
+                )
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      {/* Spacer to prevent content being hidden behind fixed navbar */}
-      {/* <div style={{ height: expanded ? "304px" : "120px", transition: "height 0.3s ease" }} /> */}
+      {/* Push content below navbar */}
       <div
         style={{
           height: expanded ? "316px" : "128px",

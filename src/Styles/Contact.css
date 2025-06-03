@@ -1,35 +1,41 @@
 .contact-section {
-    /* padding: 60px 20px; */
-    /* background-color: #f7f9fc; */
-    text-align: center;
-  }
+  /* padding: 60px 20px; */
+  /* background-color: #f7f9fc; */
+  text-align: center;
+}
 
-  .contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    resize: none;
-  }
-  
-  .contact-form button {
-    padding: 12px;
-    font-size: 1rem;
-    background-color: var(--btn-background-color);
-    color: var(--btn-text-color);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: var(--btn-background-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+
+}
+
+.contact-form button:hover {
+  background-color: var(--btn-hover-background-color);
+  color: var(--btn-hover-text-color);
+  transition: background-color 0.3s ease;
+}
